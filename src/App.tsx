@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './App.css';
 import { Box, Container } from '@mui/material';
-import SearchField from './components/SearchField';
 import { Typography } from '@mui/joy';
+import TrackSearch from './components/TrackSearch';
 
 function App() {
   return (
@@ -14,9 +14,8 @@ function App() {
             alignItems: 'center',
           }}>
         <Typography level="h1">Discography Catalogue</Typography>
-          <SearchField />
+          <TrackSearch />
       </Box>
-      
     </Container>
   );
 }

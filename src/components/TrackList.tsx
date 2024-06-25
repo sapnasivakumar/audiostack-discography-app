@@ -31,7 +31,7 @@ export default function TrackList({ releases }: TrackListProps) {
                 width= '100%'
             >
                 {releases.map((release)=> {
-                    return <TrackCard key ={release.id} release={release}/>
+                    return <TrackCard release={release}/>
                 })}
             </Stack>
             
