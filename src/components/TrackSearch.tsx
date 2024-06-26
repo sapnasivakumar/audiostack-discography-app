@@ -1,9 +1,9 @@
 import * as React from 'react';
-import SearchField from './SearchField';
 import TrackList from './TrackList';
 import { Box, Pagination } from '@mui/material';
 import { Release } from './TrackList';
 import fetchTrackListByArtistId from '../api/fetchTrackListByArtistId';
+import AutoCompleteSearch from './AutoCompleteSearch';
 
 
 
@@ -44,7 +44,7 @@ export default function TrackSearch() {
             alignItems: 'center',
             width: '100%'
         }}>
-            <SearchField onChange={handleSearch}/>
+            <AutoCompleteSearch onChange={handleSearch} />
             <TrackList releases={releases} />
             <Pagination count={numberOfPages} onChange={onPageChange} sx={{marginTop: 4}}/>
         </Box>
