@@ -12,7 +12,13 @@ const release =  {
     "thumb": "",
     "title": "Curb",
     "type": "master",
-    "year": 1996
+    "year": 1996,
+    "stats": {
+        "community": {
+            "in_wantlist": 251,
+            "in_collection": 31
+        }
+    }
   };
 
 test('render release details withint the TrackCard', () => {

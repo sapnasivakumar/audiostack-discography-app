@@ -1,7 +1,4 @@
 const fetchArtistListForAutoComplete = async (searchParam: string) => {
-
-    console.log("Env variable$$$$", process.env);
-
     const url = `https://api.discogs.com/database/search?q=${searchParam}&token=${process.env.REACT_APP_DISCOG_TOKEN}&type=artist`;
     try{
         const response = await fetch(url);

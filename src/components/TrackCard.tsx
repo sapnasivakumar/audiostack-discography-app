@@ -1,6 +1,8 @@
-import { AspectRatio, Card, CardContent, Chip, Typography } from '@mui/joy';
+import { AspectRatio, Card, CardContent, Typography } from '@mui/joy';
+import Chip from '@mui/material/Chip';
 import * as React from 'react';
 import { Release } from './TrackList';
+import { useNavigate } from 'react-router-dom';
 
 type TrackCardProps = {
     release: Release
@@ -9,6 +11,11 @@ type TrackCardProps = {
 export const defaultImgSrc = "https://media.istockphoto.com/id/108195157/photo/record-spinning-on-turn-table.jpg?s=2048x2048&w=is&k=20&c=fZctB2a91p00CC2p3IDDYxxO-TgzANl1pNbC0RoVThE=";
 
 export default function TrackCard({ release } : TrackCardProps) {
+    const navigate = useNavigate();
+    function handleTrackClick(release: Release){
+        localStorage.setItem("releaseDetails", JSON.stringify(release));
+        navigate('/trackDetails/');
+    }
     return (
             <Card
                 variant="outlined"
@@ -36,12 +43,12 @@ export default function TrackCard({ release } : TrackCardProps) {
                         {release.year}
                     </Typography>
                     <Chip
+                        label="Explore"
                         variant="outlined"
                         color="primary"
-                        size="sm"
-                    >
-                        Explore
-                    </Chip>
+                        size="small"
+                        onClick={() => handleTrackClick(release)}
+                        />
                 </CardContent>
             </Card>
     );

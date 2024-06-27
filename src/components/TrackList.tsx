@@ -5,13 +5,20 @@ import { Box, Stack } from '@mui/joy';
 type TrackListProps = {
     releases: Array<Release>
 }
+type Stats = {
+    in_collection: number
+}
+type TrackStats = {
+    community: Stats
+}
  
 export type Release = {
     title: string,
     artist: string,
     year: number,
     thumb: string,
-    id: number
+    id: number,
+    stats: TrackStats
 
 }
 export default function TrackList({ releases }: TrackListProps) {

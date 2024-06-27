@@ -12,7 +12,13 @@ const releaseList = [
     "thumb": "",
     "title": "Curb",
     "type": "master",
-    "year": 1996
+    "year": 1996,
+    "stats": {
+      "community": {
+          "in_wantlist": 251,
+          "in_collection": 31
+      }
+    }
   },
   {
     "artist": "Nickelback",
@@ -23,7 +29,13 @@ const releaseList = [
     "thumb": "https://api-img.discogs.com/12LXbUV44IHjyb6drFZOTQxgCqs=/fit-in/90x90/filters:strip_icc():format(jpeg):mode_rgb()/discogs-images/R-1905922-1251540516.jpeg.jpg",
     "title": "Leader Of Men",
     "type": "master",
-    "year": 1999
+    "year": 1999,
+    "stats": {
+      "community": {
+          "in_wantlist": 251,
+          "in_collection": 31
+      }
+   }
   }
 ];
 
