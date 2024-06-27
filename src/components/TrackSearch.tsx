@@ -46,7 +46,7 @@ export default function TrackSearch() {
         }}>
             <AutoCompleteSearch onChange={handleSearch} />
             <TrackList releases={releases} />
-            <Pagination count={numberOfPages} onChange={onPageChange} sx={{marginTop: 4}}/>
+            {numberOfPages ? <Pagination count={numberOfPages} onChange={onPageChange} sx={{marginTop: 4}}/> : null}
         </Box>
     )
 };

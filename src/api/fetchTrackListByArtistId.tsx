@@ -1,6 +1,6 @@
 const fetchTrackListByArtistId = async (artistId: number, pageNumber: number, itemsPerPage: number) => {
 
-      const url = `https://api.discogs.com/artists/${artistId}/releases?page=${pageNumber}&per_page=${itemsPerPage}`;
+      const url = `https://api.discogs.com/artists/${artistId}/releases?page=${pageNumber}&per_page=${itemsPerPage}&token=${process.env.REACT_APP_DISCOG_TOKEN}`;
       try{
           const response = await fetch(url);
           if(!response.ok){
