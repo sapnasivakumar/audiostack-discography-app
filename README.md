@@ -7,6 +7,7 @@ I had the following in mind as extensions to the current work done
 1) The history functionality to navigate back through the application can be an extension to the work done now
 2) Have added sample tests for components and API files, this can be extended through the application for extensive coverage
 3) Adding Loaders during API calls can be added further
+4) Debounce functionality for the autocomplete search bar can be added as an extension
 
 ### Vercel 
 I've deployed the app on vercel and the link to it is as follows
